@@ -19,10 +19,10 @@ Tool uses 'easyexif' library https://github.com/mayanklahiri/easyexif.git
 
 Install build tools: gcc, g++, cmake.
 
-´´´
+```bash
 cmake .
 make
-´´´
+```
 
 easyexif should be cloned automatically by CMake
 If there is problem like "easy exif files are not found" try to run cmake/make again.
