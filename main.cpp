@@ -52,7 +52,7 @@ int rename_jpg(char *name)
         sscanf(result.DateTimeOriginal.c_str(), "%d:%d:%d %d:%d:%d",
                &yy, &MM, &dd, &hh, &mm, &ss);
         char new_name[1024];
-        sprintf(new_name, "%4d_%2d_%2d__%2d_%2d_%2d-%s", yy, MM, dd, hh, mm, ss,
+        sprintf(new_name, "%04d_%02d_%02d__%02d_%02d_%02d-%s", yy, MM, dd, hh, mm, ss,
                 name);
 
         printf("Renaming %s --> %s\n",
