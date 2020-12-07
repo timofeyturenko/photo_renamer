@@ -5,6 +5,7 @@
 #include "exif.h"
 
 
+
 using namespace std;
 
 int rename_jpg(char *name)
@@ -58,6 +59,18 @@ int rename_jpg(char *name)
         printf("Renaming %s --> %s\n",
                name, new_name);
         rename(name, new_name);
+        int i = strlen(name);
+        name[i - 3] = 'N';
+        name[i - 2] = 'E';
+        name[i - 1] = 'F';
+        i = strlen(new_name);
+        new_name[i - 3] = 'N';
+        new_name[i - 2] = 'E';
+        new_name[i - 1] = 'F';
+        printf("Renaming %s --> %s\n",
+               name, new_name);
+        rename(name, new_name);
+
 
     }
     else
